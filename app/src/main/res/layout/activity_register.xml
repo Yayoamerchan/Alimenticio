@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vista.LoginActivity"
+    tools:context=".vista.Register"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
@@ -25,7 +25,7 @@
             android:padding="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="10"
                 android:gravity="center_vertical"
@@ -34,23 +34,30 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Register"
+                    android:text="@string/register"
                     android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Register With Mail or Social Networks"
-                    android:textSize="10sp" />
+                    android:text="@string/register_with_mail_or_social_networks"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
+            <!--Imagen redonda -->
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageView1"
+                android:src="@drawable/healthy_food"
+                android:scaleType="fitCenter"
+                app:riv_corner_radius="30dip"
+                app:riv_border_width="2dip"
+                app:riv_border_color="#333333"
+                app:riv_mutate_background="true"
+                app:riv_oval="true"
                 android:layout_height="100dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/healthy_food" />
+                android:layout_width="100dp"/>
+
         </LinearLayout>
 
 
@@ -61,23 +68,25 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextUser"
+                android:id="@+id/user_text"
                 android:layout_width="350sp"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_background"
                 android:ems="10"
-                android:hint="Usuario"
-                android:inputType="textPersonName" />
+                android:hint="@string/usuario"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
 
             <EditText
-                android:id="@+id/editTextPassword"
+                android:id="@+id/pass_text"
                 android:layout_width="350sp"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:background="@drawable/rounded_background"
                 android:ems="10"
-                android:hint="Contraseña"
-                android:inputType="textPassword" />
+                android:hint="@string/contrase_a"
+                android:inputType="textPassword"
+                android:importantForAutofill="no" />
         </LinearLayout>
 
         <LinearLayout
@@ -93,6 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="@string/social_network"
                 app:srcCompat="@drawable/linkedin" />
 
             <ImageView
@@ -100,13 +110,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/twitter" />
+                android:contentDescription="@string/social_network"
+                app:srcCompat="@drawable/twitter"
+                tools:ignore="ImageContrastCheck" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="@string/social_network"
                 app:srcCompat="@drawable/google" />
 
             <ImageView
@@ -114,13 +127,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="@string/social_network"
                 app:srcCompat="@drawable/snapchat" />
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="46dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/social_network"
                 app:srcCompat="@drawable/github" />
 
         </LinearLayout>
@@ -129,22 +144,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="25dp">
+            android:paddingStart="25dp">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Terms of Service and Privacy Policy." />
+                android:text="@string/terms_of_service_and_privacy_policy" />
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnsubmit"
+        android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textColor="@color/black"
         android:backgroundTint="@color/green_custom"
         android:layout_marginHorizontal="30dp"

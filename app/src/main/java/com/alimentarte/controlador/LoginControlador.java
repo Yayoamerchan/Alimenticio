@@ -22,4 +22,17 @@ public class LoginControlador implements LoginInterfaz.Controlador {
         }
         return true;
     }
+/*
+    @Override
+    public Boolean validarCampos(String usuario, String contrasena) {
+        if (usuario.trim().isEmpty()){//borra espacios en el input
+            vista.msnValidacionLogin("El campo usuario no puede estar vacio");
+            return false;
+        }
+        else if (contrasena.trim().isEmpty()){//borra espacios en el input
+            vista.msnValidacionLogin("El campo Contraseña no puede estar vacio");
+            return false;
+        }
+        return true;
+    }*/
 }

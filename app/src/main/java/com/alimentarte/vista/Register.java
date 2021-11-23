@@ -2,6 +2,7 @@ package com.alimentarte.vista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import com.alimentarte.R;
 import com.alimentarte.controlador.LoginControlador;
 import com.alimentarte.interfaz.LoginInterfaz;
 
-public class LoginActivity extends AppCompatActivity implements LoginInterfaz.View {
+public class Register extends AppCompatActivity implements LoginInterfaz.View {
     //Variables
     private EditText usuario;
     private EditText contrasena;
@@ -21,11 +22,11 @@ public class LoginActivity extends AppCompatActivity implements LoginInterfaz.Vi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login); //conexion con la vista (xml)
+        setContentView(R.layout.activity_register); //conexion con la vista (xml)
         //Conexion de variables con elemento
-        usuario = findViewById(R.id.editTextUser);
-        contrasena = findViewById(R.id.editTextPassword);
-        boton = findViewById(R.id.btnsubmit);
+        usuario = findViewById(R.id.user_text);
+        contrasena = findViewById(R.id.pass_text);
+        boton = findViewById(R.id.btn_submit);
         LoginControlador controler = new LoginControlador(this);
 
         //escuchador del boton
@@ -35,13 +36,14 @@ public class LoginActivity extends AppCompatActivity implements LoginInterfaz.Vi
                 //test al clickear el boton
                 //Toast.makeText(LoginActivity.this,"Hola Mundo!",Toast.LENGTH_LONG).show();
                 controler.validarCampos(usuario.getText().toString(), contrasena.getText().toString());
-
+                Intent splash = new Intent(Register.this, Splash.class);
+                startActivity(splash);
             }
         });
     }
 
     @Override
     public void msnValidacionLogin(String mensaje) {
-        Toast.makeText(LoginActivity.this,mensaje,Toast.LENGTH_LONG).show();
+        Toast.makeText(Register.this,mensaje,Toast.LENGTH_LONG).show();
     }
 }

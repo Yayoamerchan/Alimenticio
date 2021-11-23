@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">Alimenticio</string>
+    <string name="app_name">Alimentarte</string>
+    <string name="register">Register</string>
+    <string name="register_with_mail_or_social_networks">Register With Mail or Social Networks</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="terms_of_service_and_privacy_policy">Terms of Service and Privacy Policy.</string>
+    <string name="submit">Submit</string>
+    <string name="social_network">Social Network</string>
+    <string name="social_network1">Social Network</string>
+    <string name="logo_app">Logo App</string>
+    <string name="social_network2">Social Network</string>
+    <string name="social_network3">Social Network</string>
+    <string name="social_network4">Social Network</string>
+    <string name="login">logIn</string>
+    <string name="twitter_creator">Twitter creator</string>
+    <string name="grupo4">Grupo4</string>
+    <string name="grupo4movil">\'@grupo4Movil\'</string>
+    <string name="register1">REGISTER</string>
+    <string name="bienvenida1">bienvenida1</string>
+    <string name="login1">LOGIN</string>
+    <string name="todo">TODO</string>
 </resources>
