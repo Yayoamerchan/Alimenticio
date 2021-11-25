@@ -13,11 +13,11 @@ public class Splash extends AppCompatActivity implements View.OnClickListener{
 
     public void procesarEvento(int opc){
         switch (opc){
-            case R.id.btn_register:
+            case R.id.btn_registers:
                 Intent register = new Intent(Splash.this, Register.class);
                 startActivity(register);
                 break;
-            case R.id.btn_login:
+            case R.id.btn_logins:
                 Intent login = new Intent(Splash.this, Login.class);
                 startActivity(login);
                 break;
@@ -43,9 +43,9 @@ public class Splash extends AppCompatActivity implements View.OnClickListener{
         });
 */
     //Implementación un evento Listener a varios botones
-        Button btn_register = findViewById(R.id.btn_register);
+        Button btn_register = findViewById(R.id.btn_registers);
         btn_register.setOnClickListener(this);
-        Button login = (Button) findViewById(R.id.btn_login);
+        Button login = (Button) findViewById(R.id.btn_logins);
         login.setOnClickListener(this);
 
     }

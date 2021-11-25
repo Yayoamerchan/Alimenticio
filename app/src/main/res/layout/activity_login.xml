@@ -62,7 +62,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/direccion"
+                android:id="@+id/usuariol"
                 android:layout_width="350sp"
                 android:layout_height="50dp"
                 android:layout_marginBottom="20dp"
@@ -73,7 +73,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/contrasena"
+                android:id="@+id/contrasenal"
                 android:layout_width="350sp"
                 android:layout_height="50dp"
                 android:background="@drawable/rounded_background"
@@ -137,7 +137,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_login2"
+        android:id="@+id/btn_loginl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
