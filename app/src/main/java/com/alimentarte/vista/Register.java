@@ -17,10 +17,13 @@ public class Register extends AppCompatActivity implements LoginInterfaz.View {
     //Variables
     private EditText usuario;
     private EditText contrasena;
-    
-
-
-
+    private EditText email;
+    private EditText nombre;
+    private EditText apellido;
+    private EditText sexo;
+    private EditText direccion;
+    private EditText ciudad;
+    private EditText celular;
 
     private Button boton;
 
@@ -29,10 +32,17 @@ public class Register extends AppCompatActivity implements LoginInterfaz.View {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register); //conexion con la vista (xml)
         //Conexion de variables con elemento
-        usuario = findViewById(R.id.direccion);
-        contrasena = findViewById(R.id.email);
+        usuario = findViewById(R.id.usuario);
+        contrasena = findViewById(R.id.contrasena);
+        email = findViewById(R.id.email);
+        nombre = findViewById(R.id.nombre);
+        apellido = findViewById(R.id.apellido);
+        sexo = findViewById(R.id.sexo);
+        direccion = findViewById(R.id.direccion);
+        ciudad = findViewById(R.id.ciudad);
+        celular = findViewById(R.id.celular);
         boton = findViewById(R.id.btn_submit);
-        LoginControlador controler = new LoginControlador(this);
+        LoginControlador controlregistro = new LoginControlador(this);
 
         //escuchador del boton
         boton.setOnClickListener(new View.OnClickListener() {
@@ -40,9 +50,9 @@ public class Register extends AppCompatActivity implements LoginInterfaz.View {
             public void onClick(View v) {
                 //test al clickear el boton
                 //Toast.makeText(LoginActivity.this,"Hola Mundo!",Toast.LENGTH_LONG).show();
-                controler.validarCampos(usuario.getText().toString(), contrasena.getText().toString());
-                Intent splash = new Intent(Register.this, Register_ok.class);
-                startActivity(splash);
+                controlregistro.validarCampos(usuario.getText().toString(), contrasena.getText().toString(), email.getText().toString(), nombre.getText().toString(), apellido.getText().toString(), sexo.getText().toString(), direccion.getText().toString(), ciudad.getText().toString(), celular.getText().toString());
+                Intent registrado = new Intent(Register.this, Register_ok.class);
+                startActivity(registrado);
             }
         });
     }

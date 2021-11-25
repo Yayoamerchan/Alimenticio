@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity implements LoginInterfaz.View {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                contrologin.validarCampos(usuario.getText().toString(), contrasena.getText().toString());
+                contrologin.validarCamposL(usuario.getText().toString(), contrasena.getText().toString());
                 Intent logueado = new Intent(Login.this, Productos.class);
                 startActivity(logueado);
             }

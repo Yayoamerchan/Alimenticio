@@ -118,7 +118,7 @@
             android:importantForAutofill="no"
             android:inputType="textCapCharacters" />
 
-        <AutoCompleteTextView
+        <EditText
             android:id="@+id/sexo"
             android:layout_width="350sp"
             android:layout_height="40dp"
@@ -126,8 +126,8 @@
             android:background="@drawable/rounded_background"
             android:ems="10"
             android:hint="@string/sexo"
-            android:importantForAutofill="yes"
-            android:inputType="textFilter" />
+            android:inputType="textFilter"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/direccion"
