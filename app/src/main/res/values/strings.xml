@@ -3,7 +3,6 @@
     <string name="register">Register</string>
     <string name="register_with_mail_or_social_networks">Register With Mail or Social Networks</string>
     <string name="usuario">Usuario</string>
-    <string name="contrase_a">Contraseña</string>
     <string name="terms_of_service_and_privacy_policy">Terms of Service and Privacy Policy.</string>
     <string name="submit">Submit</string>
     <string name="social_network">Social Network</string>
@@ -20,4 +19,17 @@
     <string name="bienvenida1">bienvenida1</string>
     <string name="login1">LOGIN</string>
     <string name="todo">TODO</string>
+    <string name="test">TODO</string>
+    <string name="LogIn">LogIn</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="sexo">Sexo</string>
+    <string name="direcci_n">Dirección</string>
+    <string name="email">email</string>
+    <string name="direccion">direccion</string>
+    <string name="contrasena">contrasena</string>
+    <string name="ciudad">ciudad</string>
+    <string name="celular">celular</string>
+    <string name="fotograf_a_de_perfil">Fotografía de Perfil</string>
+    <string name="reg_success">Registro Satisfactorio! Se envio un correo electronico para verificar y confirmar su identidad.</string>
 </resources>

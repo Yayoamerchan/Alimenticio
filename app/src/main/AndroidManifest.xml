@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alimenticio" >
         <activity
+            android:name=".vista.Register_ok"
+            android:exported="false" />
+        <activity
             android:name=".vista.Splash"
             android:exported="true"
             android:label="@string/app_name"
@@ -21,9 +24,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".vista.Login"
+            android:exported="false" />
+        <activity
             android:name=".vista.Register"
             android:exported="false"
-            android:theme="@style/Theme.Alimenticio.NoActionBar"/>
+            android:theme="@style/Theme.Alimenticio.NoActionBar" />
     </application>
 
 </manifest>

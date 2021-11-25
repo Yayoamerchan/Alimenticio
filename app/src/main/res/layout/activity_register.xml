@@ -8,163 +8,223 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/register"
-                    android:textSize="40sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/register_with_mail_or_social_networks"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-            <!--Imagen redonda -->
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/imageView1"
-                android:src="@drawable/healthy_food"
-                android:scaleType="fitCenter"
-                app:riv_corner_radius="30dip"
-                app:riv_border_width="2dip"
-                app:riv_border_color="#333333"
-                app:riv_mutate_background="true"
-                app:riv_oval="true"
-                android:layout_height="100dp"
-                android:layout_width="100dp"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/user_text"
-                android:layout_width="350sp"
-                android:layout_height="50dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/rounded_background"
-                android:ems="10"
-                android:hint="@string/usuario"
-                android:inputType="textPersonName"
-                android:importantForAutofill="no" />
-
-            <EditText
-                android:id="@+id/pass_text"
-                android:layout_width="350sp"
-                android:layout_height="50dp"
-                android:background="@drawable/rounded_background"
-                android:ems="10"
-                android:hint="@string/contrase_a"
-                android:inputType="textPassword"
-                android:importantForAutofill="no" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/social_network"
-                app:srcCompat="@drawable/linkedin" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/social_network"
-                app:srcCompat="@drawable/twitter"
-                tools:ignore="ImageContrastCheck" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/social_network"
-                app:srcCompat="@drawable/google" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/social_network"
-                app:srcCompat="@drawable/snapchat" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="40dp"
-                android:layout_height="46dp"
-                android:layout_weight="1"
-                android:contentDescription="@string/social_network"
-                app:srcCompat="@drawable/github" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="25dp">
-
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/terms_of_service_and_privacy_policy" />
+                android:text="@string/register"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_with_mail_or_social_networks"
+                android:textSize="12sp" />
+
         </LinearLayout>
 
+        <!--Imagen redonda -->
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/healthy_food"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="30dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <EditText
+            android:id="@+id/usuario"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/usuario"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/contrasena"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/contrasena"
+            android:importantForAutofill="no"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/nombre"
+            android:importantForAutofill="no"
+            android:inputType="textCapCharacters" />
+
+        <EditText
+            android:id="@+id/apellido"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/apellido"
+            android:importantForAutofill="no"
+            android:inputType="textCapCharacters" />
+
+        <AutoCompleteTextView
+            android:id="@+id/sexo"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/sexo"
+            android:importantForAutofill="yes"
+            android:inputType="textFilter" />
+
+        <EditText
+            android:id="@+id/direccion"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/direccion"
+            android:importantForAutofill="no"
+            android:inputType="textCapCharacters" />
+
+        <EditText
+            android:id="@+id/ciudad"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/ciudad"
+            android:importantForAutofill="no"
+            android:inputType="textCapCharacters" />
+
+        <EditText
+            android:id="@+id/celular"
+            android:layout_width="350sp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_background"
+            android:ems="10"
+            android:hint="@string/celular"
+            android:importantForAutofill="no"
+            android:inputType="phone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_of_service_and_privacy_policy" />
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="@color/green_custom"
         android:text="@string/submit"
         android:textColor="@color/black"
-        android:backgroundTint="@color/green_custom"
-        android:layout_marginHorizontal="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:text="@string/fotograf_a_de_perfil" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/fotoPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/foto"
+            android:layout_gravity="center"
+            app:riv_border_color="#333333"
+            app:riv_border_width="1dip"
+            app:riv_corner_radius="50dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
