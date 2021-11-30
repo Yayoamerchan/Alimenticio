@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vista.Register"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".vista.Register">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -126,8 +126,8 @@
             android:background="@drawable/rounded_background"
             android:ems="10"
             android:hint="@string/sexo"
-            android:inputType="textFilter"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="textFilter" />
 
         <EditText
             android:id="@+id/direccion"
@@ -206,19 +206,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:textSize="20sp"
-            android:textAlignment="center"
             android:layout_gravity="center"
             android:ems="10"
-            android:text="@string/fotograf_a_de_perfil" />
+            android:text="@string/fotograf_a_de_perfil"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/fotoPerfil"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_gravity="center"
             android:scaleType="fitCenter"
             android:src="@drawable/foto"
-            android:layout_gravity="center"
             app:riv_border_color="#333333"
             app:riv_border_width="1dip"
             app:riv_corner_radius="50dip"

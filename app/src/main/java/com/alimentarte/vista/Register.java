@@ -10,10 +10,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.alimentarte.R;
+import com.alimentarte.controlador.FormularioControlador;
 import com.alimentarte.controlador.LoginControlador;
+import com.alimentarte.interfaz.Formulario_Interfaz;
 import com.alimentarte.interfaz.LoginInterfaz;
 
-public class Register extends AppCompatActivity implements LoginInterfaz.View {
+public class Register extends AppCompatActivity implements Formulario_Interfaz.View {
     //Variables
     private EditText usuario;
     private EditText contrasena;
@@ -42,7 +44,7 @@ public class Register extends AppCompatActivity implements LoginInterfaz.View {
         ciudad = findViewById(R.id.ciudad);
         celular = findViewById(R.id.celular);
         boton = findViewById(R.id.btn_submit);
-        LoginControlador controlregistro = new LoginControlador(this);
+        FormularioControlador controlregistro = new FormularioControlador(this);
 
         //escuchador del boton
         boton.setOnClickListener(new View.OnClickListener() {
@@ -50,15 +52,18 @@ public class Register extends AppCompatActivity implements LoginInterfaz.View {
             public void onClick(View v) {
                 //test al clickear el boton
                 //Toast.makeText(LoginActivity.this,"Hola Mundo!",Toast.LENGTH_LONG).show();
-                controlregistro.validarCampos(usuario.getText().toString(), contrasena.getText().toString(), email.getText().toString(), nombre.getText().toString(), apellido.getText().toString(), sexo.getText().toString(), direccion.getText().toString(), ciudad.getText().toString(), celular.getText().toString());
-                Intent registrado = new Intent(Register.this, Register_ok.class);
-                startActivity(registrado);
+                if (v.getId() == R.id.btn_submit){
+                    if (controlregistro.validarCampos(usuario.getText().toString(), contrasena.getText().toString(), email.getText().toString(), nombre.getText().toString(), apellido.getText().toString(), sexo.getText().toString(), direccion.getText().toString(), ciudad.getText().toString(), celular.getText().toString())) {
+                        Intent registrado = new Intent(Register.this, Register_ok.class);
+                        startActivity(registrado);
+                    }
+                }
             }
         });
     }
 
     @Override
-    public void msnValidacionLogin(String mensaje) {
+    public void msnValidacionFormulario(String mensaje) {
         Toast.makeText(Register.this,mensaje,Toast.LENGTH_LONG).show();
     }
 }

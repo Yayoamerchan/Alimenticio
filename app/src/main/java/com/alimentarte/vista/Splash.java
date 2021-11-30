@@ -11,7 +11,8 @@ import com.alimentarte.R;
 
 public class Splash extends AppCompatActivity implements View.OnClickListener{
 
-    public void procesarEvento(int opc){
+    public void procesarEvento(int opc){ //el Atributo es el id del boton (en Numero)
+    //Mira cual es el id del boton y usa el switch
         switch (opc){
             case R.id.btn_registers:
                 Intent register = new Intent(Splash.this, Register.class);
@@ -43,15 +44,15 @@ public class Splash extends AppCompatActivity implements View.OnClickListener{
         });
 */
     //Implementación un evento Listener a varios botones
-        Button btn_register = findViewById(R.id.btn_registers);
-        btn_register.setOnClickListener(this);
         Button login = (Button) findViewById(R.id.btn_logins);
         login.setOnClickListener(this);
-
+        Button btn_register = findViewById(R.id.btn_registers);
+        btn_register.setOnClickListener(this);
     }
 
+//Implementa el View.OnClickListener
     @Override
     public void onClick(View v) {
-        procesarEvento(v.getId());
+        procesarEvento(v.getId());  //v.getId() capturamos el id del boton (en Numero) y vamos a metodo procesarEvento
     }
 }
