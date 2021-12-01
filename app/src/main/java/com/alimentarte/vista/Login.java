@@ -38,11 +38,11 @@ public class Login extends AppCompatActivity implements LoginInterfaz.View {
                     //controllogin es la instancia de LoginControlador, con el metodo validarCampoL. Es decir usa el metodo ValidarCampoL de la clase LoginControlador
                     //con los atributos
                     if (contrologin.validarCamposL(usuario.getText().toString(), contrasena.getText().toString())){
-                        if (contrologin.cotejo(usuario.getText().toString(), contrasena.getText().toString())){
+                        if (contrologin.cotejar(usuario.getText().toString(), contrasena.getText().toString())){
                             Intent logueado = new Intent(Login.this, Productos.class);
                             startActivity(logueado);
-                        } else
-                            Toast.makeText(Login.this, "Usuario Incorrecto",Toast.LENGTH_LONG).show(); //Hacer del lado del controlador
+                        } //else
+//                            Toast.makeText(Login.this, "Usuario o Contraseña Incorrectos",Toast.LENGTH_LONG).show(); //Hacer del lado del controlador
                     }
                 }
             }

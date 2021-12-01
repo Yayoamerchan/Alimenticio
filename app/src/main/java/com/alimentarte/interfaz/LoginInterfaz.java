@@ -7,7 +7,7 @@ public interface LoginInterfaz {
 
     interface Controlador {
         Boolean validarCamposL (String usuario, String contrasena);
-        Boolean cotejo (String usuario, String contrasena);
+        Boolean cotejar (String usuario, String contrasena);
     }
 
     interface Modelo {

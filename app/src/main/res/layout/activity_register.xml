@@ -82,7 +82,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="@string/contrasena"
+            android:hint="Contrasena"
             android:importantForAutofill="no"
             android:inputType="textPassword" />
 
@@ -118,16 +118,13 @@
             android:importantForAutofill="no"
             android:inputType="textCapCharacters" />
 
-        <EditText
+        <Spinner
             android:id="@+id/sexo"
             android:layout_width="350sp"
             android:layout_height="40dp"
-            android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
-            android:ems="10"
-            android:hint="@string/sexo"
-            android:importantForAutofill="no"
-            android:inputType="textFilter" />
+            android:layout_marginBottom="5dp"
+            />
 
         <EditText
             android:id="@+id/direccion"
@@ -136,7 +133,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="@string/direccion"
+            android:hint="Direccion"
             android:importantForAutofill="no"
             android:inputType="textCapCharacters" />
 
@@ -147,7 +144,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="@string/ciudad"
+            android:hint="Ciudad"
             android:importantForAutofill="no"
             android:inputType="textCapCharacters" />
 
@@ -158,7 +155,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="@string/celular"
+            android:hint="Celular"
             android:importantForAutofill="no"
             android:inputType="phone" />
 

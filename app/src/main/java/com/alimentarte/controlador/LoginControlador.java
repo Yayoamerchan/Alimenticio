@@ -15,23 +15,31 @@ public class LoginControlador implements LoginInterfaz.Controlador{
         if (usuario.trim().isEmpty()){//borra espacios en el input
             vista.msnValidacionLogin("El campo usuario no puede estar vacio");
             return false;
-        } else if (usuario.trim().length() <= 4) {
-            vista.msnValidacionLogin("El campo es menor de 3 caracteres");
+        } else if (usuario.trim().length() < 4) {
+            vista.msnValidacionLogin("El campo Usuario debe tener por menos 5 caracteres");
             return false;
         }
         else if (contrasena.trim().isEmpty()){//borra espacios en el input
             vista.msnValidacionLogin("El campo Contraseña no puede estar vacio");
+            return false;
+        } else if (contrasena.trim().length() < 4) {
+            vista.msnValidacionLogin("El campo Contraseña debe tener por menos 5 caracteres");
             return false;
         }
         return true;
     }
 
     @Override
-    public Boolean cotejo (String usuario, String contrasena) {
-        if (usuario.equals("Prueba") && contrasena.equals("12345")) {
-            return true;
+    public Boolean cotejar (String usuario, String contrasena) {
+        if (usuario.equals("Prueba")) {
+            if (contrasena.equals("12345")) {
+                return true;
+            } else
+                vista.msnValidacionLogin("Contraseña Incorrecta");
+                return false;
         } else
-            return false;
+            vista.msnValidacionLogin("Usuario Incorrecto");
+                return false;
     }
 /*
     @Override

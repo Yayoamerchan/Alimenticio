@@ -35,7 +35,7 @@ public class FormularioControlador implements Formulario_Interfaz.Controlador {
             vista.msnValidacionFormulario("El campo Apellido Esta vacio");
             return false;
         }
-        else if (sexo.trim().isEmpty()){//borra espacios en el input
+        else if (sexo.trim().equals("Seleccione el Sexo")){//borra espacios en el input
             vista.msnValidacionFormulario("El campo Sexo Esta vacio");
             return false;
         }
