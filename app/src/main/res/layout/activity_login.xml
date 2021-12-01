@@ -92,7 +92,7 @@
             android:paddingRight="20dp">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/btnLinkedIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -100,7 +100,7 @@
                 app:srcCompat="@drawable/linkedin" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/btnTwitter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -109,7 +109,7 @@
                 tools:ignore="ImageContrastCheck" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/btnGmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -117,15 +117,15 @@
                 app:srcCompat="@drawable/google" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/btnFacebook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/social_network"
-                app:srcCompat="@drawable/snapchat" />
+                app:srcCompat="@drawable/facebook" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/btnGitHub"
                 android:layout_width="40dp"
                 android:layout_height="46dp"
                 android:layout_weight="1"

@@ -10,10 +10,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.alimentarte.R;
-import com.alimentarte.controlador.LoginControlador;
-import com.alimentarte.interfaz.LoginInterfaz;
+import com.alimentarte.controlador.ControladorLogin;
+import com.alimentarte.interfaz.LoginInterface;
 
-public class Login extends AppCompatActivity implements LoginInterfaz.View {
+public class Login extends AppCompatActivity implements LoginInterface.View {
 //Variables de los campos y los botones de la vista Login.xml
     private EditText usuario;
     private EditText contrasena;
@@ -28,14 +28,14 @@ public class Login extends AppCompatActivity implements LoginInterfaz.View {
         usuario = findViewById(R.id.usuariol);
         contrasena = findViewById(R.id.contrasenal);
         boton = findViewById(R.id.btn_loginl);
-        //Instanciamos la clase LoginControlador y la ponemos en la var contrologin
-        LoginControlador contrologin = new LoginControlador(this);
+        //Instanciamos la clase ControladorLogin y la ponemos en la var contrologin
+        ControladorLogin contrologin = new ControladorLogin(this);
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.btn_loginl) {
-                    //controllogin es la instancia de LoginControlador, con el metodo validarCampoL. Es decir usa el metodo ValidarCampoL de la clase LoginControlador
+                    //controllogin es la instancia de ControladorLogin, con el metodo validarCampoL. Es decir usa el metodo ValidarCampoL de la clase ControladorLogin
                     //con los atributos
                     if (contrologin.validarCamposL(usuario.getText().toString(), contrasena.getText().toString())){
                         if (contrologin.cotejar(usuario.getText().toString(), contrasena.getText().toString())){

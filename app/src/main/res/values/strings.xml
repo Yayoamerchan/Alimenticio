@@ -32,4 +32,8 @@
     <string name="celular">celular</string>
     <string name="fotograf_a_de_perfil">Fotografía de Perfil</string>
     <string name="reg_success">Registro Satisfactorio! Se envio un correo electronico para verificar y confirmar su identidad.</string>
+    <string name="Contrasena">Contrasena</string>
+    <string name="Direccion">Direccion</string>
+    <string name="Ciudad">Ciudad</string>
+    <string name="Celular">Celular</string>
 </resources>

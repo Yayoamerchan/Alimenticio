@@ -82,7 +82,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="Contrasena"
+            android:hint="@string/Contrasena"
             android:importantForAutofill="no"
             android:inputType="textPassword" />
 
@@ -122,9 +122,9 @@
             android:id="@+id/sexo"
             android:layout_width="350sp"
             android:layout_height="40dp"
-            android:background="@drawable/rounded_background"
             android:layout_marginBottom="5dp"
-            />
+            android:background="@drawable/rounded_background"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
             android:id="@+id/direccion"
@@ -133,7 +133,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="Direccion"
+            android:hint="@string/Direccion"
             android:importantForAutofill="no"
             android:inputType="textCapCharacters" />
 
@@ -144,7 +144,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="Ciudad"
+            android:hint="@string/Ciudad"
             android:importantForAutofill="no"
             android:inputType="textCapCharacters" />
 
@@ -155,7 +155,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="Celular"
+            android:hint="@string/Celular"
             android:importantForAutofill="no"
             android:inputType="phone" />
 
@@ -220,7 +220,8 @@
             app:riv_border_width="1dip"
             app:riv_corner_radius="50dip"
             app:riv_mutate_background="true"
-            app:riv_oval="true" />
+            app:riv_oval="true"
+            tools:ignore="ImageContrastCheck" />
 
     </LinearLayout>
 

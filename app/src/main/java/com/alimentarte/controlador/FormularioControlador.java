@@ -1,7 +1,6 @@
 package com.alimentarte.controlador;
 
 import com.alimentarte.interfaz.Formulario_Interfaz;
-import com.alimentarte.interfaz.LoginInterfaz;
 
 public class FormularioControlador implements Formulario_Interfaz.Controlador {
 
@@ -15,14 +14,19 @@ public class FormularioControlador implements Formulario_Interfaz.Controlador {
     public Boolean validarCampos(String usuario, String contrasena, String email, String nombre, String apellido, String sexo, String direccion, String ciudad, String celular) {
         //switch
 
-        if (usuario.trim().isEmpty()){//borra espacios en el input
+        if (usuario.trim().isEmpty()) {//borra espacios en el input
             vista.msnValidacionFormulario("El campo usuario Esta vacio");
             return false;
-        }
+            } else if (usuario.trim().length() < 4) {
+                vista.msnValidacionFormulario("El campo Usuario debe tener por menos 5 caracteres");
+                return false;
+            }
         else if (contrasena.trim().isEmpty()){//borra espacios en el input
             vista.msnValidacionFormulario("El campo Contraseña Esta vacio");
-            return false;
-        }
+            } else if (contrasena.trim().length() < 4) {
+                vista.msnValidacionFormulario("El campo Contraseña debe tener por menos 5 caracteres");
+                return false;
+            }
         else if (email.trim().isEmpty()){//borra espacios en el input
             vista.msnValidacionFormulario("El campo email Esta vacio");
             return false;

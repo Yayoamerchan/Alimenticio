@@ -1,6 +1,6 @@
 package com.alimentarte.interfaz;
 
-public interface LoginInterfaz {
+public interface LoginInterface {
     interface View {
         void msnValidacionLogin (String mensaje);
     }

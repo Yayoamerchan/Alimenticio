@@ -1,12 +1,12 @@
 package com.alimentarte.controlador;
 
-import com.alimentarte.interfaz.LoginInterfaz;
+import com.alimentarte.interfaz.LoginInterface;
 
 //implemento las funcionalidades de la interfaz
-public class LoginControlador implements LoginInterfaz.Controlador{
-    private final LoginInterfaz.View vista;
+public class ControladorLogin implements LoginInterface.Controlador{
+    private final LoginInterface.View vista;
 
-    public LoginControlador(LoginInterfaz.View vista) {
+    public ControladorLogin(LoginInterface.View vista) {
         this.vista = vista;
     }
 
@@ -33,6 +33,7 @@ public class LoginControlador implements LoginInterfaz.Controlador{
     public Boolean cotejar (String usuario, String contrasena) {
         if (usuario.equals("Prueba")) {
             if (contrasena.equals("12345")) {
+                vista.msnValidacionLogin("Usuario Autorizado");
                 return true;
             } else
                 vista.msnValidacionLogin("Contraseña Incorrecta");
