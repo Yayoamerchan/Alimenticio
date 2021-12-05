@@ -15,8 +15,11 @@ import com.alimentarte.interfaz.LoginInterface;
 
 public class Login extends AppCompatActivity implements LoginInterface.View {
 //Variables de los campos y los botones de la vista Login.xml
+    private Button volver;
+
     private EditText usuario;
     private EditText contrasena;
+
     private Button boton;
 
     @Override
@@ -25,11 +28,22 @@ public class Login extends AppCompatActivity implements LoginInterface.View {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
         //Conexion de variables con elemento por el Id
+        volver = findViewById(R.id.btn_volverl);
+
         usuario = findViewById(R.id.usuariol);
         contrasena = findViewById(R.id.contrasenal);
+
         boton = findViewById(R.id.btn_loginl);
         //Instanciamos la clase ControladorLogin y la ponemos en la var contrologin
         ControladorLogin contrologin = new ControladorLogin(this);
+
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent(Login.this, Splash.class);
+                startActivity(back);
+            }
+        });
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override

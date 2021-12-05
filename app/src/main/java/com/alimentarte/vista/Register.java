@@ -21,6 +21,8 @@ import java.util.List;
 
 public class Register extends AppCompatActivity implements Formulario_Interfaz.View {
     //Variables
+    private Button volver;
+
     private EditText usuario;
     private EditText contrasena;
     private EditText email;
@@ -38,6 +40,8 @@ public class Register extends AppCompatActivity implements Formulario_Interfaz.V
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register); //conexion con la vista (xml)
         //Conexion de variables con elemento
+        volver = findViewById(R.id.btn_volverl);
+
         usuario = findViewById(R.id.usuario);
         contrasena = findViewById(R.id.contrasena);
         email = findViewById(R.id.email);
@@ -52,6 +56,15 @@ public class Register extends AppCompatActivity implements Formulario_Interfaz.V
 
         //escuchador del boton
         mostrarSexo();
+
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent(Register.this, Splash.class);
+                startActivity(back);
+            }
+        });
+
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -36,4 +36,7 @@
     <string name="Direccion">Direccion</string>
     <string name="Ciudad">Ciudad</string>
     <string name="Celular">Celular</string>
+    <string name="boton_volver">Boton Volver</string>
+    <string name="volver">volver</string>
+    <string name="back">Back</string>
 </resources>
