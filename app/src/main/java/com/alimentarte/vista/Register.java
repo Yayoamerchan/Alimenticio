@@ -75,10 +75,10 @@ public class Register extends AppCompatActivity implements Formulario_Interfaz.V
     public List<String> obtenerSexo() {
         List<String> direccion = new ArrayList<>();
 
-        direccion.add("Seleccione el Sexo");
+        direccion.add("Seleccione el Sexo                                 V");
         direccion.add("MASCULINO");
         direccion.add("FEMENINO");
-        direccion.add("NO APLICA");
+        direccion.add("OTRO");
 
         return direccion;
     }

@@ -23,6 +23,7 @@ public class FormularioControlador implements Formulario_Interfaz.Controlador {
             }
         else if (contrasena.trim().isEmpty()){//borra espacios en el input
             vista.msnValidacionFormulario("El campo Contraseña Esta vacio");
+            return false;
             } else if (contrasena.trim().length() < 4) {
                 vista.msnValidacionFormulario("El campo Contraseña debe tener por menos 5 caracteres");
                 return false;

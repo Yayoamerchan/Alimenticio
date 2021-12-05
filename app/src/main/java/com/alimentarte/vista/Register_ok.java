@@ -25,7 +25,7 @@ public class Register_ok extends AppCompatActivity {
                 // acciones que se ejecutan tras los milisegundos
                 finalizarmain();
             }
-        }, 5000); //5segundo
+        }, 3000); //3segundo
     }
     public void finalizarmain() {
         Intent siguiente = new Intent(this, Login.class);
